@@ -13,7 +13,7 @@ app.use(express.static(__dirname + '/public'));
 
 // hbs setup
 app.set('view engine', 'html');
-app.engine('html', hbs._express)
+app.engine('html', require('hbs')._express)
 
 // making route to home page
 app.get('/', (req, res) => {
@@ -22,5 +22,4 @@ app.get('/', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Server starts on port ${port}.`);
-  console.log(cat());
 });
