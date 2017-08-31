@@ -10,7 +10,7 @@ app.engine('html', hbs._express)
 
 // making route to home page
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index.hbs');
 });
 
 app.listen(3000, () => {
