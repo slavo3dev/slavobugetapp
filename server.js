@@ -6,3 +6,7 @@ const app = express();
 app.get('/', (req, res) => {
      res.render(home.html);
 });
+
+app.listen(3000, () => {
+     console.log("Server is working on port 3000 - localhost:3000")
+});
