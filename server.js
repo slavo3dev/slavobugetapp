@@ -2,17 +2,15 @@
 const express = require('express');
 const app = express();
 
-//hbs module for easier routing 
-//const hbs = require('hbs');
+// hbs module for easier routing 
+const hbs = require('hbs');
 
-//app.set('view engine', 'html');
-//app.engine('html', hbs._express)
+app.set('view engine', 'html');
+app.engine('html', hbs._express)
 
 // making route to home page
 app.get('/', (req, res) => {
-  res.render('index', function(err, html) {
-    res.send(html);
-  });
+  res.render('index');
 });
 
 app.listen(3000, () => {
