@@ -2,6 +2,9 @@
 const express = require('express');
 const app = express();
 
+// making Port varibale 
+const port = process.env.PORT || 3000;
+
 // hbs module for easier routing 
 const hbs = require('hbs');
 
