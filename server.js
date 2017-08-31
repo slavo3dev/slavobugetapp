@@ -4,7 +4,9 @@ const app = express();
 
 // making route to home page
 app.get('/', (req, res) => {
-     res.render(home.html);
+     res.render(home, (err, html) => {
+       res.send(html);
+     });
 });
 
 app.listen(3000, () => {
