@@ -14,9 +14,7 @@ const hbs = require('hbs');
 
 // making route to home page
 app.get('/',(req, res) => {
-   res.render('index.hbs', function(err, html) {
-    res.send(html);
-  });
+   res.send('Hello World');
 });
 
 
