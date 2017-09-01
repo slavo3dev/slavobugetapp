@@ -8,17 +8,17 @@ const port = process.env.PORT || 3000;
 // hbs module for easier routing 
 const hbs = require('hbs');
 
-// use static 
-app.use(express.static(__dirname + '/public'));
-
 // hbs setup
-app.set('view engine', 'html');
-app.engine('html', require('hbs')._express)
+// app.set('view engine', 'html');
+// app.engine('html', require('hbs')._express)
 
 // making route to home page
-app.get('/', (req, res) => {
-  res.render('index.hbs');
+app.get('/',(req, res) => {
+   res.render('index.hbs', function(err, html) {
+    res.send(html);
+  });
 });
+
 
 app.listen(port, () => {
   console.log(`Server starts on port ${port}.`);
