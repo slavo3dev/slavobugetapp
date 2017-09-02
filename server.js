@@ -8,6 +8,9 @@ const port = process.env.PORT || 3000;
 // hbs module for easier routing 
 const hbs = require('hbs');
 
+// static page 
+app.use(express.static('public'));
+
 // hbs setup
 // app.set('view engine', 'html');
 // app.engine('html', require('hbs')._express)
