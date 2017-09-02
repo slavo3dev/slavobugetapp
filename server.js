@@ -17,7 +17,7 @@ app.use(express.static('public'));
 
 // making route to home page
 app.get('/',(req, res) => {
-   res.render('index.hbs');
+   res.render('index.html');
 });
 
 
